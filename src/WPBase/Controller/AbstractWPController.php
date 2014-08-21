@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 namespace WPBase\Controller;
 
@@ -123,7 +123,7 @@ abstract class AbstractWPController extends AbstractActionController
         }
 
         if ($this->getRequest()->isXmlHttpRequest() || $this->getRequest()->isGet()) {
-            return new JsonModel(array($this->getWPService()->remove($this->params()->fromRoute('id'))));
+            return new JsonModel(array($this->getWPService()->remove((int)$this->params()->fromRoute('id'))));
         }
     }
 
